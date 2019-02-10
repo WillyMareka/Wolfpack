@@ -19,7 +19,7 @@ class Home extends MY_Controller {
 
 		$this->template->setPageTitle('WolfPack Studios')
                         ->setPartial('home_v', $data)
-                        ->frontEndTemplate2();
+                        ->frontEndTemplate();
 	}
 
     public function FAQ()

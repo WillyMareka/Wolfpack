@@ -1,89 +1,121 @@
 <?php $assets_url = $this->config->item('assets_url'); ?>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>EQA</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1, max-scale=1">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato|Raleway|Roboto" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700|Open+Sans:400,400i,600,600i,700,700i" rel="stylesheet"> -->
-    <link href="<?= @$assets_url; ?>frontend/css/style.css" rel="stylesheet">
-    <style type="text/css">
-        body ul#main-menu li a{
-            /*font-family: 'Roboto', sans-serif;*/
-            font-family: 'Lato', sans-serif;
-            font-family: 'Raleway', sans-serif;
-            font-size: 15px;
-        }
-    </style>
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="ie" lang="en">
+<![endif]-->
+<html lang="en">
+
+
+<!-- Mirrored from www.styllustheme.com/ThemeUnit/thirdeye-preview/thirdeye/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Apr 2017 11:04:22 GMT -->
+<head>
+    <!-- Basic Page Needs  -->
+    <meta charset="utf-8">
+    <title>WolfPack Studios</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Specific Mega  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Google Fonts -->
+    
+    <!-- CSS -->
+    <link rel="icon" href="<?= @$assets_url; ?>img/smallLogo.PNG">
+    <link rel="stylesheet" href="<?= @$assets_url; ?>plugin/bootstrap-4.2.1/css/bootstrap.min.css">
+
+    <link href="<?= @$base_url; ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+  <!-- Plugin CSS -->
+  <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Theme CSS - Includes Bootstrap -->
+  <link href="<?= @$assets_url; ?>css/creative.min.css" rel="stylesheet">
+    
     <?= @$page_css; ?>
 </head>
-<body>
-    <div id="website-loading">
-        <div class="loader">
-            <div class="la-ball-newton-cradle">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        </div><!-- .loader end -->
-    </div>
 
-    <div id = "full-container">
-        <header id="header" data-scroll-index="0">
-            <div id="header-wrap">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <a class="logo" href="#">
-                                <img height="50px" width="50px" src="<?= @$assets_url; ?>frontend/images/files/gok.png" alt="">
-                                <img height="60px" width="180px" src="<?= @$assets_url; ?>frontend/images/files/ministry.png" alt="">
-                                <h5><span class="colored">Scour</span></h5>
-                                <span>Landing Template</span>
-                            </a>
-
-
-                            <ul id="main-menu" class="main-menu">
-                                <li><a data-scroll-nav="0" href="#header">Home</a></li>
-                                <li><a data-scroll-nav="1" href="#aboutus">About Us</a></li>
-                                <li><a data-scroll-nav="2" href="#library">Library</a></li>
-                                <li><a data-scroll-nav="4" href="#contactus">Contact Us</a></li>
-                            </ul>
-                            <a class="header-btn btn small colorful hover-dark" href="<?= @base_url('Auth/signup'); ?>">Register</a>
-                            <a style="margin-right: 10px;" class="header-btn btn small colorful hover-dark" href="<?= @base_url('Auth/signin'); ?>">Login</a>
-                            <div class="mobile-menu-btn hamburger hamburger--slider">
-                                <span class="hamburger-box">
-                                    <span class="hamburger-inner"></span>
-                                </span>
-                            </div>
-                            <div class="clearfix"></div>
-                            <div id="mobile-menu"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <?= $this->load->view($partial, $partialData); ?>
-    </div>
+<body id="page-top">
+    <!-- Preloader Starts -->
     
-    <script src="<?= @$this->config->item('assets_url'); ?>frontend/js/jquery.js"></script>
-    <script src="<?= @$this->config->item('assets_url'); ?>frontend/js/jRespond.min.js"></script>
-    <script src="<?= @$this->config->item('assets_url'); ?>frontend/js/jquery.easing.min.js"></script>
-    <script src="<?= @$this->config->item('assets_url'); ?>frontend/js/jquery.fitvids.js"></script>
-    <script src="<?= @$this->config->item('assets_url'); ?>frontend/js/jquery.waypoints.min.js"></script>
-    <script src="<?= @$this->config->item('assets_url'); ?>frontend/js/jquery.stellar.js"></script>
-    <script src="<?= @$this->config->item('assets_url'); ?>frontend/js/owl.carousel.min.js"></script>
-    <script src="<?= @$this->config->item('assets_url'); ?>frontend/js/jquery.mb.YTPlayer.min.js"></script>
-    <script src="<?= @$this->config->item('assets_url'); ?>frontend/js/hoverIntent.js"></script>
-    <script src="<?= @$this->config->item('assets_url'); ?>frontend/js/simple-scrollbar.min.js"></script>
-    <script src="<?= @$this->config->item('assets_url'); ?>frontend/js/superfish.js"></script>
-    <script src="<?= @$this->config->item('assets_url'); ?>frontend/js/scrollIt.min.js"></script>
-    <script src='<?= @$this->config->item('assets_url'); ?>frontend/js/jquery.magnific-popup.min.js'></script>
-    <script src="<?= @$this->config->item('assets_url'); ?>frontend/js/jssocials.min.js"></script>
-    <script src='<?= @$this->config->item('assets_url'); ?>frontend/js/jquery.validate.min.js'></script>
-    <script src='<?= @$this->config->item('assets_url'); ?>frontend/js/functions.js'></script>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">WolfPack Studios</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto my-2 my-lg-0">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+    <!-- Preloader Ends -->
+    <!-- Nav Section -->
+    <header class="masthead">
+        <div class="container h-100">
+          <div class="row h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-10 align-self-end">
+                <video autoplay controls>
+                <!-- <video width="320" height="240" controls> -->
+                  <source src="<?= @$assets_url; ?>videos/avengers.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video>
+              <h1 class="text-uppercase text-white font-weight-bold">Thoughts into a Reality</h1>
+              <hr class="divider my-4">
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+              <p class="text-white-75 font-weight-light mb-5">Services the make your imaginations into a reality. You are only limited by your mind</p>
+              <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Contact Us</a>
+            </div>
+          </div>
+        </div>
+    </header>
+    <!-- End Nav Section -->
+    <!-- Hero Section -->
+
+    <?= $this->load->view($partial, $partialData); ?>
+
+    <!-- Footer Section -->
+    
+    <!-- Ends Footer Section -->
+    <!-- Copyright Section -->
+    <footer class="bg-light py-5">
+        <div class="container">
+          <div class="small text-center text-muted">Copyright &copy; 2019 - Wolfpack Studios</div>
+        </div>
+      </footer>
+    <!-- Ends Copyright Section -->
+    <!-- Scripts -->
+        <script src="<?= @$base_url; ?>vendor/jquery/jquery.min.js"></script>
+        <script src="<?= @$base_url; ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+      <!-- Plugin JavaScript -->
+        <script src="<?= @$base_url; ?>vendor/jquery-easing/jquery.easing.min.js"></script>
+        <script src="<?= @$base_url; ?>vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+      <!-- Custom scripts for this template -->
+        <script src="<?= @$assets_url; ?>js/creative.min.js"></script>
     <?= @$page_js; ?>
 </body>
+
+
 </html>

@@ -22,9 +22,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/EQA/';
+$config['base_url'] = 'http://localhost/Wolfpack/';
 $config['assets_url'] = $config['base_url'] . 'assets/';
-$config['server_url'] = "http://localhost/EQA/";
+$config['server_url'] = "http://localhost/Wolfpack/";
 /*
 |--------------------------------------------------------------------------
 | Index File
