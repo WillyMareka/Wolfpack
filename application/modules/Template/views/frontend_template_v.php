@@ -35,6 +35,7 @@
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="<?= @$assets_url; ?>css/creative.min.css" rel="stylesheet">
+  <link href="<?= @$assets_url; ?>css/main.css" rel="stylesheet">
     
     <?= @$page_css; ?>
 </head>
@@ -73,19 +74,24 @@
     <header class="masthead">
         <div class="container h-100">
           <div class="row h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-10 align-self-end">
-                <video autoplay controls>
+            <div>
+                <video autoplay muted loop id="myVideo">
                 <!-- <video width="320" height="240" controls> -->
                   <source src="<?= @$assets_url; ?>videos/avengers.mp4" type="video/mp4">
                 Your browser does not support the video tag.
                 </video>
-              <h1 class="text-uppercase text-white font-weight-bold">Thoughts into a Reality</h1>
-              <hr class="divider my-4">
             </div>
-            <div class="col-lg-8 align-self-baseline">
-              <p class="text-white-75 font-weight-light mb-5">Services the make your imaginations into a reality. You are only limited by your mind</p>
-              <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Contact Us</a>
+            <div class="videocontent">
+                <div class="col-lg-10 align-self-end">
+                  <h1 class="text-uppercase text-white font-weight-bold">Thoughts into a Reality</h1>
+                  <hr class="divider my-4">
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                  <p class="text-white-75 font-weight-light mb-5">Services the make your imaginations into a reality. You are only limited by your mind</p>
+                  <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Contact Us</a>
+                </div>
             </div>
+            
           </div>
         </div>
     </header>
